@@ -41,12 +41,11 @@ private:
   RealSubject m_RealSubject;
 };
 
-void Print(Subject *subject) { std::cout << subject->Request() << std::endl; }
+void Print(std::string str) { std::cout << str << std::endl; }
 
 int main() {
   Proxy *proxy = new Proxy;
-
-  Print(proxy);
+  Print(proxy->Request());
 
   return 0;
 }
